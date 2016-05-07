@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         background.hidden = false
         getFitButton.hidden = true
         
-        
+        logo.alpha = 0.5
+        background.alpha = 0.5
         
         
     }
