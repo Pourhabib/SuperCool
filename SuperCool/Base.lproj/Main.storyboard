@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oiI-h8-UOX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,6 +23,7 @@
                                 <state key="normal" title="GetFitProgram"/>
                                 <connections>
                                     <action selector="getFitandCool:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4B-h6-cAe"/>
+                                    <segue destination="ZNR-II-PON" kind="show" id="pP5-qc-Tcp"/>
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seiken-Martial-Arts" translatesAutoresizingMaskIntoConstraints="NO" id="FCt-zg-H5W">
@@ -34,6 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RI6-VJ-qfx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="background" destination="h0B-yk-bja" id="rK3-bR-zRP"/>
@@ -43,7 +45,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401.5" y="371.5"/>
+            <point key="canvasLocation" x="1213.5" y="371.5"/>
+        </scene>
+        <!--Destination View Controller-->
+        <scene sceneID="GmP-OS-Jqm">
+            <objects>
+                <viewController id="ZNR-II-PON" customClass="DestinationViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J0Z-Wh-qsr"/>
+                        <viewControllerLayoutGuide type="bottom" id="kY3-EI-MNc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tu1-Lb-Niw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're here now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJV-sB-eSe">
+                                <rect key="frame" x="128" y="323" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WJV-sB-eSe" firstAttribute="centerY" secondItem="Tu1-Lb-Niw" secondAttribute="centerY" id="2Nj-01-zKr"/>
+                            <constraint firstItem="WJV-sB-eSe" firstAttribute="centerX" secondItem="Tu1-Lb-Niw" secondAttribute="centerX" id="nsj-0c-rCZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="testLabel" destination="WJV-sB-eSe" id="9oX-bM-MjV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TnL-lO-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787.5" y="371.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LCr-sY-12I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oiI-h8-UOX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gn7-Dg-FjT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tf4-pg-hX6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QR-ZL-gs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640.5" y="371.5"/>
         </scene>
     </scenes>
     <resources>
